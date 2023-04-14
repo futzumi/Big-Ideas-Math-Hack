@@ -1,0 +1,79 @@
+// dont use yet
+if (ver === "1.0") {
+  function answer() {
+    let object = LearnosityAssess.getCurrentItem().questions
+    for (let questionAmount = 0; questionAmount < object.length; questionAmount++) {
+
+      if (object[questionAmount].type === form) {
+        for (
+          let input = 0; input < LearnosityAssess.getCurrentItem().questions[questionAmount].validation.valid_response.value.length; input++
+        ) {
+          alert(LearnosityAssess.getCurrentItem().questions[questionAmount].validation.valid_response.value[input][0].value)
+        }
+      } else {
+
+
+
+        if (object[questionAmount].type === asso) {
+          for (let input = 0; input < LearnosityAssess.getCurrentItem().questions[questionAmount].validation.valid_response.value.length; input++) {
+            alert(LearnosityAssess.getCurrentItem().questions[questionAmount].validation.valid_response.value[input])
+          }
+
+
+        } else {
+          if (object[questionAmount].type === longty || object[questionAmount].type === longTxt) {
+            alert("Fatal Error")
+            location.reload()
+          } else {
+            if (object[questionAmount].type == mc) {
+              for (
+                let input = 0; input < object[questionAmount].validation.valid_response.value.length; input++
+              ) {
+                if (object[questionAmount].validation.valid_response.value[input] == 0) {
+                  alert('A')
+                }
+                if (object[questionAmount].validation.valid_response.value[input] == 1) {
+                  alert('B')
+                }
+                if (object[questionAmount].validation.valid_response.value[input] == 3) {
+                  alert('C')
+                }
+                if (object[questionAmount].validation.valid_response.value[input] == 4) {
+                  alert('D')
+                }
+              }
+            } else {
+              if (object[questionAmount].type === gl) {
+                for (
+                  let input = 0; input < object[questionAmount].validation.valid_response.value.length; input++
+                ) {
+                  if (object[questionAmount].validation.valid_response.value[input].type === 'line') {} else {
+                    if (object[questionAmount].validation.valid_response.value[input].type === 'point') {
+                      alert(JSON.stringify(object[questionAmount].validation.valid_response.value[input].coords))
+                    }
+                  }
+                }
+              } else {
+                if (object[questionAmount].type === drop) {
+                  for (
+                    let input = 0; input < object[questionAmount].validation.valid_response.value.length; input++
+                  ) {
+                    alert(object[questionAmount].validation.valid_response.value[input])
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  this.addEventListener('keypress', event => {
+    if (event.keyCode == 13) {
+      answer()
+    }
+  })
+} else {
+  alert("Your version of this hack is outdated");
+  open("https://github.com/futzumi/Big-Ideas-Math-Hack");
+}
