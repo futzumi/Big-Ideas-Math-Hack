@@ -1,4 +1,4 @@
-var ver = atob("MS4x");
+var ver = atob("MS4w");
 var form = atob("Y2xvemVmb3JtdWxh"); 
 var asso = atob("Y2xvemVhc3NvY2lhdGlvbg==");
 var longty = atob("bG9uZ3R5cGVWMg=="); 
