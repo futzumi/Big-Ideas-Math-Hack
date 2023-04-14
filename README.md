@@ -5,4 +5,4 @@
 ## Tutorial
 - don't go to secureVariables or experiment. They wont help YOU use this hack. They are simply there to make it harder for BIM to patch
 - Have fun
-## 
+- You can contact me on discord: futzumi#8150
